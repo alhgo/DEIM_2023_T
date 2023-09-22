@@ -23,8 +23,8 @@ public class Instanciador : MonoBehaviour
 
         for(int i = 0; i < amount; i++)
         {
-            Instantiate(nave, initPos, Quaternion.identity);
             initPos = initPos + despl;
+            Instantiate(nave, initPos, Quaternion.identity);
             print(initPos);
         }
         
