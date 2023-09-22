@@ -9,13 +9,18 @@ public class Instanciador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0f, 0f, 10f);
-        Instantiate(obstacle, transform.position, Quaternion.identity);
+        for(int i = 0; i < 100; i++)
+        {
+            //Memuevo un metro a la derecha en cada fotograma
+            transform.position += Vector3.right * 2;
+            Instantiate(obstacle, transform.position, Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
+
     }
 }
