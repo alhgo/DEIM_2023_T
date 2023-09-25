@@ -24,7 +24,8 @@ public class PlayerManager : MonoBehaviour
         moveY = Input.GetAxis("Vertical");
         moveX = Input.GetAxis("Horizontal");
         //Desplazar un GameObject
-        transform.Translate(Vector3.up * Time.deltaTime * speed * moveY);
+        Vector3 despl = Vector3.up * Time.deltaTime * speed * moveY;
+        transform.Translate(despl,Space.World);
         // transform.Translate(Vector3.right * Time.deltaTime * speed * moveX);
 
         transform.Rotate(Vector3.forward * Time.deltaTime * -speedRotation * moveX);
