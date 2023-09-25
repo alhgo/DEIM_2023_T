@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] float speedRotation;
     float moveY;
     float moveX;
 
@@ -14,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     {
 
         speed = 5f;
+        speedRotation = 360f;
     }
 
     // Update is called once per frame
@@ -23,7 +25,9 @@ public class PlayerManager : MonoBehaviour
         moveX = Input.GetAxis("Horizontal");
         //Desplazar un GameObject
         transform.Translate(Vector3.up * Time.deltaTime * speed * moveY);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * moveX);
+        // transform.Translate(Vector3.right * Time.deltaTime * speed * moveX);
+
+        transform.Rotate(Vector3.forward * Time.deltaTime * -speedRotation * moveX);
 
         //transform.position += Vector3.forward * Time.deltaTime * speed * moveY;
         //transform.position += Vector3.right * Time.deltaTime * speed * moveX;
