@@ -575,6 +575,11 @@ MonoBehaviour:
   - Que hay
   - Naaaas
   - Ciao
+  objects:
+  - {fileID: 1534670054306514129, guid: 963d38242b8bfc24dad875f335dd4e56, type: 3}
+  - {fileID: 6695927914926938225, guid: 60e0681e8940a5547af76e3ef9e060a5, type: 3}
+  - {fileID: 6472355914086335395, guid: 6110b6dfdd920fb40af25af5a91d561c, type: 3}
+  - {fileID: 6324190986943874710, guid: 3dd76a4cf01570744aaf495e02fdc206, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +774,7 @@ MonoBehaviour:
   naveTransform: {fileID: 101848898}
   offsetY: 2
   offsetZ: 4
+  smoothTime: 0.3
 --- !u!1 &1070379821
 GameObject:
   m_ObjectHideFlags: 0
