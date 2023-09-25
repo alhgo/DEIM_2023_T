@@ -21,7 +21,11 @@ public class PlayerManager : MonoBehaviour
     {
         moveY = Input.GetAxis("Vertical");
         moveX = Input.GetAxis("Horizontal");
-        transform.position += Vector3.forward * Time.deltaTime * speed * moveY;
-        transform.position += Vector3.right * Time.deltaTime * speed * moveX;
+        //Desplazar un GameObject
+        transform.Translate(Vector3.up * Time.deltaTime * speed * moveY);
+        transform.Translate(Vector3.right * Time.deltaTime * speed * moveX);
+
+        //transform.position += Vector3.forward * Time.deltaTime * speed * moveY;
+        //transform.position += Vector3.right * Time.deltaTime * speed * moveX;
     }
 }
