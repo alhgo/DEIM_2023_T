@@ -6,6 +6,8 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] float speed;
     float moveY;
+    float moveX;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,8 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         moveY = Input.GetAxis("Vertical");
-
+        moveX = Input.GetAxis("Horizontal");
         transform.position += Vector3.forward * Time.deltaTime * speed * moveY;
+        transform.position += Vector3.right * Time.deltaTime * speed * moveX;
     }
 }
