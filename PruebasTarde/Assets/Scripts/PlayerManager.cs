@@ -28,9 +28,11 @@ public class PlayerManager : MonoBehaviour
         transform.Translate(despl,Space.World);
         // transform.Translate(Vector3.right * Time.deltaTime * speed * moveX);
 
-        transform.Rotate(Vector3.forward * Time.deltaTime * -speedRotation * moveX);
+        //transform.Rotate(Vector3.forward * Time.deltaTime * -speedRotation * moveX);
+
+        transform.rotation = Quaternion.Euler(Vector3.forward * -60f * moveX);
 
         //transform.position += Vector3.forward * Time.deltaTime * speed * moveY;
-        //transform.position += Vector3.right * Time.deltaTime * speed * moveX;
+        transform.position += Vector3.right * Time.deltaTime * speed * moveX;
     }
 }
